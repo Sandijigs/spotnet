@@ -8,7 +8,7 @@ from aiogram import Bot, Dispatcher
 import logging
 
 from .config import TELEGRAM_TOKEN
-from .handlers import cmd_router
+from .handlers import cmd_router, admin_router
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -27,4 +27,4 @@ else:
 # Create a Dispatcher for handling updates
 dp = Dispatcher()
 # Include command routers for handling specific commands
-dp.include_routers(cmd_router)
+dp.include_routers(cmd_router, admin_router)

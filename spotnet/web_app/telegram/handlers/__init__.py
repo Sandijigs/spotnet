@@ -5,5 +5,6 @@ It serves as an entry point for the command handling functionality.
 """
 
 from .command import cmd_router
+from .admin import router as admin_router
 
 # Import command router for handling commands in the bot
